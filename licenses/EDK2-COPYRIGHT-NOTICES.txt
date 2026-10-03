@@ -1,0 +1,1044 @@
+EDK2 构建输入的版权声明
+
+来源：tianocore/edk2，edk2-stable202608
+固定提交：2970e5699ba6267f3384ffab20f96647578aebc8
+许可全文：EDK2-BSD-2-Clause-Patent.txt（上游 License.txt 原样副本）
+
+本清单依据 RELEASE_CLANGPDB 与 DEBUG_CLANGPDB 的 as-built 库列表，
+以及对应生成 makefile 中实际编译的 C/汇编源路径；同时保留模块 INF 的声明。
+所有列出的上游文件已与该固定提交的源码归档逐字节核对一致。
+它包括静态库构建输入；LTO/链接优化可能删除部分代码，因此不等于最终 EFI
+每个字节的来源映射。清单仅覆盖本次配置，不覆盖任意 SDK 或未使用的组件。
+下列路径均相对于 EDK2 源码根目录，版权文字保留原文件内容。
+
+模块：MdePkg/Library/RegisterFilterLibNull/RegisterFilterLibNull.inf
+配置：RELEASE, DEBUG
+
+MdePkg/Library/RegisterFilterLibNull/RegisterFilterLibNull.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2021 Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/RegisterFilterLibNull/RegisterFilterLibNull.inf
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2021, Intel Corporation. All rights reserved.<BR>
+
+模块：MdePkg/Library/BasePcdLibNull/BasePcdLibNull.inf
+配置：RELEASE, DEBUG
+
+MdePkg/Library/BasePcdLibNull/BasePcdLibNull.inf
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2007 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BasePcdLibNull/PcdLib.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+模块：MdePkg/Library/BaseLib/BaseLib.inf
+配置：RELEASE, DEBUG
+
+MdePkg/Library/BaseLib/ARShiftU64.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2010, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/BaseLib.inf
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2007 - 2021, Intel Corporation. All rights reserved.<BR>
+  Portions copyright (c) 2008 - 2009, Apple Inc. All rights reserved.<BR>
+  Portions copyright (c) 2011 - 2024, Arm Limited. All rights reserved.<BR>
+  Copyright (c) 2020 - 2021, Hewlett Packard Enterprise Development LP. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/BitField.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/CheckSum.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2007 - 2018, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2022, Pedro Falcato. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/ConvertGuidUuid.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2024, Arm Limited. All rights reserved.<BR>
+  Copyright (c) Microsoft Corporation.
+
+MdePkg/Library/BaseLib/Cpu.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2010, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/CpuDeadLoop.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2024, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/DivS64x64Remainder.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/DivU64x32.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2008, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/DivU64x32Remainder.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2008, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/DivU64x64Remainder.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2008, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/FilePaths.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2011 - 2017, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2018, Dell Technologies. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/GetPowerOfTwo32.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2008, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/GetPowerOfTwo64.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2010, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/HighBitSet32.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2008, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/HighBitSet64.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2008, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/LRotU32.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2008, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/LRotU64.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2008, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/LShiftU64.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2008, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/LinkedList.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/LongJump.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2008, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/LowBitSet32.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2008, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/LowBitSet64.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2008, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/Math64.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2010, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/ModU64x32.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2008, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/MultS64x64.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2010, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/MultU64x32.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2010, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/MultU64x64.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2010, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/QuickSort.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2021, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/RRotU32.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2008, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/RRotU64.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2008, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/RShiftU64.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2008, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/SafeString.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2014 - 2019, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/SetJump.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2008, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/String.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2019, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/SwapBytes16.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2008, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/SwapBytes32.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2008, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/SwapBytes64.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2008, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/SwitchStack.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/Unaligned.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2010, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X64/CpuId.nasm
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2008, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X64/CpuIdEx.nasm
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2008, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X64/DisableCache.nasm
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2008, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X64/DisablePaging64.nasm
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2022, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X64/EnableCache.nasm
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2008, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X64/EnableDisableInterrupts.nasm
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X64/FsGsBase.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2026, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X64/GccInline.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2020, Intel Corporation. All rights reserved.<BR>
+  Portions copyright (c) 2008 - 2009, Apple Inc. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X64/GccInlinePriv.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2021, Intel Corporation. All rights reserved.<BR>
+  Portions copyright (c) 2008 - 2009, Apple Inc. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X64/Lfence.nasm
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X64/LongJump.nasm
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2022, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X64/Non-existing.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2008, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X64/Pvalidate.nasm
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2021, AMD. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X64/RdRand.nasm
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2015 - 2022, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X64/ReadFsBase.nasm
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2026, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X64/RmpAdjust.nasm
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2021, Advanced Micro Devices, Inc. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X64/SetJump.nasm
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2022, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X64/SevProbe.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2025, Advanced Micro Devices, Inc. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X64/SwitchStack.nasm
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2008, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X64/TdCall.nasm
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2020 - 2021, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X64/TdProbe.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2020-2021, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X64/TdVmcall.nasm
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2020 - 2021, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X64/Thunk16.nasm
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X64/VmgExit.nasm
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (C) 2020, Advanced Micro Devices, Inc. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X64/VmgExitSvsm.nasm
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (C) 2024, Advanced Micro Devices, Inc. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X64/WriteFsBase.nasm
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2026, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X64/WriteTr.nasm
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2017, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X64/XGetBv.nasm
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (C) 2020, Advanced Micro Devices, Inc. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X64/XSetBv.nasm
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2021, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X86DisablePaging32.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2008, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X86DisablePaging64.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2008, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X86EnablePaging32.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2008, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X86EnablePaging64.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2008, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X86FxRestore.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2012, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X86FxSave.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2012, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X86GetInterruptState.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2008, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X86Msr.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X86PatchInstruction.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (C) 2018, Intel Corporation. All rights reserved.<BR>
+  Copyright (C) 2018, Red Hat, Inc.
+
+MdePkg/Library/BaseLib/X86RdRand.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2016, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X86ReadGdtr.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2008, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X86ReadIdtr.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2008, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X86SpeculationBarrier.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (C) 2018 - 2019, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X86Thunk.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X86WriteGdtr.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2008, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/X86WriteIdtr.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2008, Intel Corporation. All rights reserved.<BR>
+
+模块：MdePkg/Library/BaseDebugLibNull/BaseDebugLibNull.inf
+配置：RELEASE
+
+MdePkg/Library/BaseDebugLibNull/BaseDebugLibNull.inf
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2007 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseDebugLibNull/DebugLib.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2019, Intel Corporation. All rights reserved.<BR>
+
+模块：MdePkg/Library/BaseMemoryLibRepStr/BaseMemoryLibRepStr.inf
+配置：RELEASE, DEBUG
+
+MdePkg/Library/BaseMemoryLibRepStr/BaseMemoryLibRepStr.inf
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2007 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseMemoryLibRepStr/CompareMemWrapper.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseMemoryLibRepStr/CopyMemWrapper.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseMemoryLibRepStr/IsZeroBufferWrapper.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2016, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseMemoryLibRepStr/MemLibGuid.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseMemoryLibRepStr/ScanMem16Wrapper.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseMemoryLibRepStr/ScanMem32Wrapper.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseMemoryLibRepStr/ScanMem64Wrapper.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseMemoryLibRepStr/ScanMem8Wrapper.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseMemoryLibRepStr/SetMem16Wrapper.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2010, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseMemoryLibRepStr/SetMem32Wrapper.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2010, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseMemoryLibRepStr/SetMem64Wrapper.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2010, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseMemoryLibRepStr/SetMemNWrapper.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseMemoryLibRepStr/SetMemWrapper.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseMemoryLibRepStr/X64/CompareMem.nasm
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2008, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseMemoryLibRepStr/X64/CopyMem.nasm
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseMemoryLibRepStr/X64/IsZeroBuffer.nasm
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2016, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseMemoryLibRepStr/X64/ScanMem16.nasm
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2008, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseMemoryLibRepStr/X64/ScanMem32.nasm
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2008, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseMemoryLibRepStr/X64/ScanMem64.nasm
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2008, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseMemoryLibRepStr/X64/ScanMem8.nasm
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2008, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseMemoryLibRepStr/X64/SetMem.nasm
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseMemoryLibRepStr/X64/SetMem16.nasm
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseMemoryLibRepStr/X64/SetMem32.nasm
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseMemoryLibRepStr/X64/SetMem64.nasm
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseMemoryLibRepStr/X64/ZeroMem.nasm
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseMemoryLibRepStr/ZeroMemWrapper.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+模块：MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.inf
+配置：RELEASE, DEBUG
+
+MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.inf
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2007 - 2018, Intel Corporation. All rights reserved.<BR>
+
+模块：MdeModulePkg/Library/BaseHobLibNull/BaseHobLibNull.inf
+配置：RELEASE, DEBUG
+
+MdeModulePkg/Library/BaseHobLibNull/BaseHobLibNull.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2007 - 2018, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2018, Linaro, Ltd. All rights reserved.<BR>
+
+MdeModulePkg/Library/BaseHobLibNull/BaseHobLibNull.inf
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2018, Linaro, Ltd. All rights reserved.<BR>
+
+模块：MdePkg/Library/UefiMemoryAllocationLib/UefiMemoryAllocationLib.inf
+配置：RELEASE, DEBUG
+
+MdePkg/Library/UefiMemoryAllocationLib/MemoryAllocationLib.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/UefiMemoryAllocationLib/UefiMemoryAllocationLib.inf
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2007 - 2018, Intel Corporation. All rights reserved.<BR>
+
+模块：MdePkg/Library/BaseIoLibIntrinsic/BaseIoLibIntrinsic.inf
+配置：RELEASE, DEBUG
+
+MdePkg/Library/BaseIoLibIntrinsic/BaseIoLibIntrinsic.inf
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2007 - 2021, Intel Corporation. All rights reserved.<BR>
+  Portions copyright (c) 2008 - 2009, Apple Inc. All rights reserved.<BR>
+  Copyright (c) 2017, AMD Incorporated. All rights reserved.<BR>
+  Portions Copyright (c) 2020, Hewlett Packard Enterprise Development LP. All rights reserved.<BR>
+  Portions Copyright (c) 2022, Loongson Technology Corporation Limited. All rights reserved.<BR>
+
+MdePkg/Library/BaseIoLibIntrinsic/IoHighLevel.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseIoLibIntrinsic/IoLib.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2021, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseIoLibIntrinsic/IoLibFifo.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2021 - 2023, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseIoLibIntrinsic/IoLibGcc.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2021, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseIoLibIntrinsic/IoLibInternalTdxNull.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2021, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseIoLibIntrinsic/IoLibMmioBuffer.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2007 - 2018, Intel Corporation. All rights reserved.<BR>
+
+模块：MdePkg/Library/StackCheckLibNull/StackCheckLibNull.inf
+配置：RELEASE, DEBUG
+
+MdePkg/Library/StackCheckLibNull/StackCheckLibNull.inf
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) Microsoft Corporation.
+
+MdePkg/Library/StackCheckLibNull/StackCheckLibNullGcc.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) Microsoft Corporation.
+
+模块：OvmfPkg/Library/QemuFwCfgLib/QemuFwCfgDxeLib.inf
+配置：RELEASE, DEBUG
+
+OvmfPkg/Library/QemuFwCfgLib/QemuFwCfgCache.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2025, Intel Corporation. All rights reserved.<BR>
+
+OvmfPkg/Library/QemuFwCfgLib/QemuFwCfgDxe.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (C) 2013, Red Hat, Inc.
+  Copyright (c) 2011 - 2013, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2017, Advanced Micro Devices. All rights reserved.<BR>
+
+OvmfPkg/Library/QemuFwCfgLib/QemuFwCfgDxeLib.inf
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (C) 2013, Red Hat, Inc.
+  Copyright (c) 2008 - 2012, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2017, AMD Incorporated. All rights reserved.<BR>
+
+OvmfPkg/Library/QemuFwCfgLib/QemuFwCfgLib.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2011 - 2013, Intel Corporation. All rights reserved.<BR>
+  Copyright (C) 2013, Red Hat, Inc.
+  Copyright (c) 2017, AMD Incorporated. All rights reserved.<BR>
+
+模块：MdePkg/Library/UefiDriverEntryPoint/UefiDriverEntryPoint.inf
+配置：RELEASE, DEBUG
+
+MdePkg/Library/UefiDriverEntryPoint/DriverEntryPoint.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/UefiDriverEntryPoint/UefiDriverEntryPoint.inf
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2007 - 2018, Intel Corporation. All rights reserved.<BR>
+
+模块：OvmfPkg/Library/MemDebugLogLib/MemDebugLogLibNull.inf
+配置：DEBUG
+
+OvmfPkg/Library/MemDebugLogLib/MemDebugLogLibNull.inf
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (C) 2025, Oracle and/or its affiliates.
+
+OvmfPkg/Library/MemDebugLogLib/MemDebugLogNull.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (C) 2025, Oracle and/or its affiliates.
+
+模块：MdePkg/Library/BaseDebugPrintErrorLevelLib/BaseDebugPrintErrorLevelLib.inf
+配置：DEBUG
+
+MdePkg/Library/BaseDebugPrintErrorLevelLib/BaseDebugPrintErrorLevelLib.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2011 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseDebugPrintErrorLevelLib/BaseDebugPrintErrorLevelLib.inf
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2011 - 2018, Intel Corporation. All rights reserved.<BR>
+
+模块：MdePkg/Library/BasePrintLib/BasePrintLib.inf
+配置：DEBUG
+
+MdePkg/Library/BasePrintLib/BasePrintLib.inf
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2007 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BasePrintLib/PrintLib.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+  Portions copyright (c) 2008 - 2009, Apple Inc. All rights reserved.<BR>
+
+MdePkg/Library/BasePrintLib/PrintLibInternal.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+模块：OvmfPkg/Library/PlatformDebugLibIoPort/PlatformDebugLibIoPort.inf
+配置：DEBUG
+
+OvmfPkg/Library/PlatformDebugLibIoPort/DebugIoPortQemu.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2019, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2012, Red Hat, Inc.<BR>
+  Copyright (c) 2020, Citrix Systems, Inc.
+
+OvmfPkg/Library/PlatformDebugLibIoPort/DebugLib.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2019, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2012, Red Hat, Inc.<BR>
+
+OvmfPkg/Library/PlatformDebugLibIoPort/DebugLibDetect.c
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2017, Red Hat, Inc.<BR>
+
+OvmfPkg/Library/PlatformDebugLibIoPort/PlatformDebugLibIoPort.inf
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2012, Red Hat, Inc.<BR>
+
+
+编译依赖文件的附加声明
+
+以下文件来自同次编译的依赖记录。头部声明和宏不一定生成机器代码，
+这里保留其版权作为补充，不宣称完整文件被打包进 EFI。
+
+MdeModulePkg/Include/Protocol/IoMmu.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2017, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Include/Base.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2021, Intel Corporation. All rights reserved.<BR>
+  Portions copyright (c) 2008 - 2009, Apple Inc. All rights reserved.<BR>
+
+MdePkg/Include/ConfidentialComputingGuestAttr.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2021 AMD Inc. All rights reserved.<BR>
+
+MdePkg/Include/Guid/HiiFormMapMethodGuid.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2009 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Include/Guid/PcAnsi.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Include/Guid/WinCertificate.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2012, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Include/IndustryStandard/Acpi10.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2020, Arm Limited. All rights reserved.<BR>
+
+MdePkg/Include/IndustryStandard/Acpi20.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Include/IndustryStandard/Acpi30.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+  Copyright (C) 2025, Advanced Micro Devices, Inc. All rights reserved.
+
+MdePkg/Include/IndustryStandard/Acpi40.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2010 - 2022, Intel Corporation. All rights reserved.<BR>
+  Copyright (C) 2025, Advanced Micro Devices, Inc. All rights reserved.
+
+MdePkg/Include/IndustryStandard/Acpi50.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2014 Hewlett-Packard Development Company, L.P.<BR>
+  Copyright (c) 2011 - 2022, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2020, ARM Ltd. All rights reserved.<BR>
+  Copyright (C) 2025, Advanced Micro Devices, Inc. All rights reserved.
+
+MdePkg/Include/IndustryStandard/Acpi51.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2014 Hewlett-Packard Development Company, L.P.<BR>
+  Copyright (c) 2014 - 2022, Intel Corporation. All rights reserved.<BR>
+  (C) Copyright 2015 Hewlett Packard Enterprise Development LP<BR>
+  Copyright (c) 2020, ARM Ltd. All rights reserved.<BR>
+  Copyright (C) 2024, Advanced Micro Devices, Inc. All rights reserved.
+
+MdePkg/Include/IndustryStandard/Acpi60.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2015 - 2022, Intel Corporation. All rights reserved.<BR>
+  (C) Copyright 2015-2016 Hewlett Packard Enterprise Development LP<BR>
+  Copyright (c) 2020, ARM Ltd. All rights reserved.<BR>
+  Copyright (C) 2025, Advanced Micro Devices, Inc. All rights reserved.
+
+MdePkg/Include/IndustryStandard/AcpiAml.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2011, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2019 - 2021, Arm Limited. All rights reserved.<BR>
+  Copyright (C) 2026, Advanced Micro Devices, Inc. All rights reserved.<BR>
+
+MdePkg/Include/IndustryStandard/Bluetooth.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2015 - 2017, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Include/IndustryStandard/PeImage.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+  Portions copyright (c) 2008 - 2009, Apple Inc. All rights reserved.<BR>
+  Portions Copyright (c) 2016 - 2020, Hewlett Packard Enterprise Development LP. All rights reserved.<BR>
+  Portions Copyright (c) 2022, Loongson Technology Corporation Limited. All rights reserved.<BR>
+
+MdePkg/Include/IndustryStandard/Tpm12.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Include/IndustryStandard/Tpm20.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2013 - 2015, Intel Corporation. All rights reserved. <BR>
+
+MdePkg/Include/Library/BaseLib.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2021, Intel Corporation. All rights reserved.<BR>
+  Portions copyright (c) 2008 - 2009, Apple Inc. All rights reserved.<BR>
+  Copyright (c) Microsoft Corporation.<BR>
+  Portions Copyright (c) 2020, Hewlett Packard Enterprise Development LP. All rights reserved.<BR>
+  Portions Copyright (c) 2022, Loongson Technology Corporation Limited. All rights reserved.<BR>
+  Copyright (c) 2023 - 2024, Arm Limited. All rights reserved.<BR>
+
+MdePkg/Include/Library/BaseMemoryLib.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Include/Library/DebugLib.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2020, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Include/Library/DebugPrintErrorLevelLib.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2011 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Include/Library/HobLib.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Include/Library/IoLib.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2017, AMD Incorporated. All rights reserved.<BR>
+
+MdePkg/Include/Library/MemoryAllocationLib.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Include/Library/PcdLib.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Include/Library/PrintLib.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Include/Library/RegisterFilterLib.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2021, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Include/Library/StackCheckLib.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) Microsoft Corporation.
+
+MdePkg/Include/Library/UefiBootServicesTableLib.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2008, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Include/Library/UefiDriverEntryPoint.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Include/Pi/PiBootMode.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2012, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Include/Pi/PiDependency.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Include/Pi/PiDxeCis.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Include/Pi/PiFirmwareFile.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2017, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Include/Pi/PiFirmwareVolume.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2017, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Include/Pi/PiHob.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2017, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Include/Pi/PiMultiPhase.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Include/Pi/PiPeiCis.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2019, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Include/Pi/PiS3BootScript.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2009 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Include/Pi/PiStatusCode.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2009 - 2018, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2024, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+
+MdePkg/Include/PiDxe.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Include/PiPei.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Include/Ppi/CpuIo.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Include/Ppi/PciCfg2.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Include/Protocol/DebugSupport.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+  Portions copyright (c) 2011 - 2013, ARM Ltd. All rights reserved.<BR>
+  Copyright (c) 2020, Hewlett Packard Enterprise Development LP. All rights reserved.<BR>
+
+MdePkg/Include/Protocol/DevicePath.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Include/Protocol/LoadedImage.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Include/Protocol/PciIo.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Include/Protocol/SimpleTextIn.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2011, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Include/Protocol/SimpleTextInEx.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Include/Protocol/SimpleTextOut.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Include/Register/Amd/Cpuid.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2017 - 2024, Advanced Micro Devices. All rights reserved.<BR>
+
+MdePkg/Include/Register/Amd/SevSnpMsr.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2017 - 2024, Advanced Micro Devices. All rights reserved.<BR>
+
+MdePkg/Include/Register/Intel/Cpuid.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2015 - 2023, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Include/Uefi.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Include/Uefi/UefiBaseType.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2021, Intel Corporation. All rights reserved.<BR>
+  Portions copyright (c) 2011 - 2016, ARM Ltd. All rights reserved.<BR>
+  Copyright (c) 2020, Hewlett Packard Enterprise Development LP. All rights reserved.<BR>
+  Copyright (c) 2022, Loongson Technology Corporation Limited. All rights reserved.<BR>
+
+MdePkg/Include/Uefi/UefiGpt.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2019, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Include/Uefi/UefiInternalFormRepresentation.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+  (C) Copyright 2016 Hewlett Packard Enterprise Development LP<BR>
+
+MdePkg/Include/Uefi/UefiMultiPhase.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Include/Uefi/UefiPxe.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Include/Uefi/UefiSpec.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2021, Intel Corporation. All rights reserved.<BR>
+  Portions Copyright (c) 2020, Hewlett Packard Enterprise Development LP. All rights reserved.<BR>
+  Copyright (c) 2022, Loongson Technology Corporation Limited. All rights reserved.<BR>
+
+MdePkg/Include/X64/ProcessorBind.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2019, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseIoLibIntrinsic/BaseIoLibIntrinsicInternal.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2007 - 2021, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseIoLibIntrinsic/IoLibTdx.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2020 - 2021, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseLib/BaseLibInternals.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2019, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BaseMemoryLibRepStr/MemLibInternals.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2016, Intel Corporation. All rights reserved.<BR>
+
+MdePkg/Library/BasePrintLib/PrintLibInternal.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2006 - 2018, Intel Corporation. All rights reserved.<BR>
+
+OvmfPkg/Include/IndustryStandard/E820.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2013, Citrix Systems UK Ltd.
+  Copyright (c) 2006 - 2013, Intel Corporation. All rights reserved.<BR>
+
+OvmfPkg/Include/IndustryStandard/QemuFwCfg.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2011 - 2013, Intel Corporation. All rights reserved.<BR>
+  Copyright (C) 2013 - 2017, Red Hat, Inc.
+
+OvmfPkg/Include/Library/MemDebugLogLib.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (C) 2025, Oracle and/or its affiliates.
+
+OvmfPkg/Include/Library/MemEncryptSevLib.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2017 - 2020, AMD Incorporated. All rights reserved.<BR>
+
+OvmfPkg/Include/Library/MemEncryptTdxLib.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2020, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2017, AMD Incorporated. All rights reserved.<BR>
+
+OvmfPkg/Include/Library/PlatformInitLib.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2021, Intel Corporation. All rights reserved.<BR>
+
+OvmfPkg/Include/Library/QemuFwCfgLib.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2011 - 2013, Intel Corporation. All rights reserved.<BR>
+  Copyright (C) 2013, Red Hat, Inc.
+
+OvmfPkg/Include/WorkArea.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2021 - 2024, AMD Inc.
+
+OvmfPkg/Library/PlatformDebugLibIoPort/DebugLibDetect.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (c) 2017, Red Hat, Inc.<BR>
+
+OvmfPkg/Library/QemuFwCfgLib/QemuFwCfgLibInternal.h
+  SPDX-License-Identifier: BSD-2-Clause-Patent
+  Copyright (C) 2016, Red Hat, Inc.
+  Copyright (C) 2017, Advanced Micro Devices. All rights reserved
+

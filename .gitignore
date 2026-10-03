@@ -1,0 +1,6 @@
+/build/
+__pycache__/
+*.pyc
+.DS_Store
+# 本机 SDK/编译器的绝对路径，由构建脚本自动生成。
+/.vscode/c_cpp_properties.json

@@ -1,0 +1,72 @@
+来源与许可
+
+项目源码
+
+本项目新增和改写的源码、构建脚本与测试采用 BSD-2-Clause，完整条款见 LICENSE。
+项目贡献者的集合署名不替代下述上游版权，也不表示上游作者为本项目背书。
+
+OpRegion 交接思路与结构字段参考 VfioIgdPkg 的 IgdAssignmentDxe 和
+Include/IndustryStandard/IgdOpRegion.h：
+  https://github.com/tomitamoeko/VfioIgdPkg
+  commit 067328df2554c865cc0078cb922357301c4c36c6
+原始版权与 BSD-2-Clause 许可完整保留在本 NOTICE 末尾及
+licenses/VfioIgdPkg-BSD-2-Clause.txt。
+
+外部 SDK 与 EFI/ROM 二进制
+
+EDK2 是外部构建依赖，未作为 SDK 源码整体收录到本项目。当前核对版本：
+  https://github.com/tianocore/edk2
+  edk2-stable202608
+  commit 2970e5699ba6267f3384ffab20f96647578aebc8
+
+本项目生成的 EFI 镜像静态链接了 EDK2 代码，ROM 封装保留这些代码。
+依据该固定版本的 RELEASE_CLANGPDB 与 DEBUG_CLANGPDB as-built INF 和
+生成的库构建文件，两种配置合计使用 16 个库；核对到的模块与编译源文件
+均标注 BSD-2-Clause-Patent。其原始许可（包含专利授权条款）见
+licenses/EDK2-BSD-2-Clause-Patent.txt，编译依赖头部声明一并保留；逐文件版权声明与相对路径见
+licenses/EDK2-COPYRIGHT-NOTICES.txt。链接优化可能移除部分输入代码，清单
+保留本次构建输入的版权声明，不声称每个输入都完整出现在最终二进制中。
+
+项目的 BSD-2-Clause 声明不重新许可或移除 EDK2 部分的 BSD-2-Clause-Patent
+条款。分发 EFI/ROM 时应一并附带 LICENSE、NOTICE 和 licenses/ 目录。
+本清单对应上述固定 SDK 与两种配置；更换 SDK、库实现或构建配置后应重新核对。
+它不覆盖整个 EDK2 仓库中未参与本次构建的第三方组件。
+
+编译器、NASM、EDK2 BaseTools 是外部工具，不是本 EFI 静态链接的运行库；
+本项目的源码发布不捆绑这些工具二进制，其自身许可仍适用于工具的分发。
+
+阅读参考
+
+实现时查阅了 QEMU IGD 分配接口以及 Linux Intel 显示驱动中的格式处理，
+用于核对 fw_cfg、ASLS 与表字段的含义。本项目未复制或链接 Linux 内核实现，
+也未把 QEMU 程序代码编入 EFI/ROM；这些阅读参考不改变本项目代码的许可。
+VBT/BDB 字段的来源说明见上述 BSD 许可的 VfioIgdPkg 结构头。
+
+VfioIgdPkg 原始许可（原样保留）
+
+BSD 2-Clause License
+
+Copyright (C) 2018, Red Hat, Inc.
+Copyright (c) 2016 - 2019, Intel Corporation.
+Copyright (c) 2025, Tomita Moeko <tomitamoeko@gmail.com>
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.

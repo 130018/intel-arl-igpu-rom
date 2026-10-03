@@ -1,0 +1,36 @@
+# SPDX-License-Identifier: BSD-2-Clause
+# 模块清单：主流程、数据交接、纯数据校验分别编译并链接成一个 EFI 镜像。
+# 参考来源与版权声明见项目根目录 NOTICE。
+[Defines]
+  INF_VERSION    = 1.27
+  BASE_NAME      = IgdOpRegion
+  FILE_GUID      = 91A0C8CB-8CED-4FDB-93B3-55A609480F48
+  MODULE_TYPE    = DXE_DRIVER
+  VERSION_STRING = 0.2
+  ENTRY_POINT    = IgdOpRegionEntry
+
+[Sources]
+  IgdOpRegion.c
+  OpRegion.c
+  OpRegion.h
+  Validate.c
+  Validate.h
+
+[Packages]
+  MdePkg/MdePkg.dec
+  OvmfPkg/OvmfPkg.dec
+
+[LibraryClasses]
+  BaseMemoryLib
+  DebugLib
+  QemuFwCfgLib
+  UefiBootServicesTableLib
+  UefiDriverEntryPoint
+
+[Protocols]
+  gEfiLoadedImageProtocolGuid
+  gEfiPciIoProtocolGuid
+
+# 标准 PCI ROM 加载时，其所属控制器已经安装 PCI_IO。
+[Depex]
+  TRUE

@@ -1,0 +1,48 @@
+# 本流程检查 Mac 构建及纯数据测试；不启动 PVE，也不发布 ROM。
+name: Mac build and tests
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: macos-15
+    strategy:
+      fail-fast: false
+      matrix:
+        target: [RELEASE, DEBUG]
+    name: X64 ${{ matrix.target }}
+    env:
+      EDK2_TAG: edk2-stable202608
+      EDK2_COMMIT: 2970e5699ba6267f3384ffab20f96647578aebc8
+      # CI 封装用的示例元数据，不代表所有设备都能使用这份 ROM。
+      TEST_PCI_ID: 8086:7d67
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Install build tools
+        run: brew install llvm lld nasm
+      - name: Prepare pinned EDK2
+        shell: bash
+        run: |
+          git clone --depth 1 --branch "$EDK2_TAG" https://github.com/tianocore/edk2.git "$RUNNER_TEMP/edk2-rom-build"
+          test "$(git -C "$RUNNER_TEMP/edk2-rom-build" rev-parse HEAD)" = "$EDK2_COMMIT"
+          git -C "$RUNNER_TEMP/edk2-rom-build" submodule update --init \
+            MdePkg/Library/MipiSysTLib/mipisyst \
+            MdeModulePkg/Library/BrotliCustomDecompressLib/brotli
+      - name: Build and test
+        shell: bash
+        env:
+          BUILD_TARGET: ${{ matrix.target }}
+        run: |
+          args=()
+          if [[ "$BUILD_TARGET" == DEBUG ]]; then args+=(--debug); fi
+          bash tools/build.sh "$RUNNER_TEMP/edk2-rom-build" \
+            --pci-id "$TEST_PCI_ID" --output "build/$BUILD_TARGET" "${args[@]}"
+          bash tests/run.sh "$RUNNER_TEMP/edk2-rom-build" "build/$BUILD_TARGET"
