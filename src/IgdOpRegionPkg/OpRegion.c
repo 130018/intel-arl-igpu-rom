@@ -31,21 +31,11 @@ IgdOpRegionAssign (
   UINTN                Size;
   UINTN                Pages;
   UINT8                *Blob;
-  UINT32               OldAsls;
   UINT32               NewAsls;
   UINT32               ReadBack;
 
-  Status = PciIo->Pci.Read (PciIo, EfiPciIoWidthUint32, IGD_ASLS_OFFSET, 1, &OldAsls);
-  if (EFI_ERROR (Status)) {
-    return Status;
-  }
-
-  if (OldAsls != 0) {
-    // 不解引用未知的现有地址，不覆盖其他固件已完成的配置。
-    DEBUG ((DEBUG_INFO, "IgdOpRegion: existing ASLS=%08x preserved; no assignment\n", OldAsls));
-    return EFI_ALREADY_STARTED;
-  }
-
+  // 客体重启可能保留旧 ASLS，但旧页不一定属于本轮启动的保留内存。
+  // 每次入口都重新建立完整副本；不读取、解引用或释放旧地址。
   // fw_cfg 是 QEMU 向客体固件提供数据的接口；该名字不是宿主机文件路径。
   // QEMU 这项接口只描述单个 IGD，ROM 必须附属于提供该 blob 的那个 IGD。
   ReturnStatus = QemuFwCfgFindFile ("etc/igd-opregion", &Item, &Size);
@@ -59,7 +49,7 @@ IgdOpRegionAssign (
   }
 
   // ASLS 只有 32 位。AllocateMaxAddress 保证整个分配位于 4 GiB 以下。
-  // NVS 表示这段内容要保留给操作系统，不能作为入口临时缓冲区回收。
+  // 本轮新分配的 NVS 要保留给操作系统，不能作为入口临时缓冲区回收。
   Pages = EFI_SIZE_TO_PAGES (Size);
   Address = BASE_4GB - 1;
   Status = gBS->AllocatePages (AllocateMaxAddress, EfiACPIMemoryNVS, Pages, &Address);

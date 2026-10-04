@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # SPDX-License-Identifier: BSD-2-Clause
-# 在 Mac 上运行纯数据测试；不执行 EFI，不访问设备。
+# 在 Mac 上运行数据与交接生命周期测试；不执行 EFI，不访问设备。
 set -euo pipefail
 if (( $# < 1 || $# > 2 )); then
   printf '用法：bash tests/run.sh EDK2目录 [已构建产物目录]\n' >&2
@@ -26,4 +26,13 @@ trap 'rm -rf -- "$task_tmp"' EXIT
   "$task_project/tests/validate_test.c" "$task_project/src/IgdOpRegionPkg/Validate.c" \
   -o "$task_tmp/validate_test"
 "$task_tmp/validate_test"
+# 实际交接函数使用 mock 固件服务；数据复制和校验仍执行生产代码。
+"$(xcrun --find clang)" -std=c11 -Wall -Wextra -Werror -fshort-wchar \
+  -isysroot "$(xcrun --sdk macosx --show-sdk-path)" \
+  -fsanitize=address,undefined -g -DEFIAPI= -DMDEPKG_NDEBUG \
+  -I "$task_edk2/MdePkg/Include" -I "$task_edk2/MdePkg/Include/$task_arch" \
+  -I "$task_edk2/OvmfPkg/Include" -I "$task_project/src/IgdOpRegionPkg" \
+  "$task_project/tests/assign_test.c" "$task_project/src/IgdOpRegionPkg/OpRegion.c" \
+  "$task_project/src/IgdOpRegionPkg/Validate.c" -o "$task_tmp/assign_test"
+"$task_tmp/assign_test"
 PYTHONDONTWRITEBYTECODE=1 python3 "$task_project/tests/test_rom.py" "$task_out"

@@ -1,4 +1,4 @@
-# 本流程检查 Mac 构建及纯数据测试；不启动 PVE，也不发布 ROM。
+# 本流程检查 Mac 构建及本机数据、交接测试；不启动 PVE，也不发布 ROM。
 name: Mac build and tests
 
 on:

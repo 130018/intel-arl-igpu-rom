@@ -2,7 +2,7 @@
 
 在 macOS 上构建用于 **Proxmox VE 9.2 / QEMU / OVMF** 的 Intel Arrow Lake 核显直通辅助 ROM，产物名称为 **`intel-arl-igpu.rom`**。
 
-这个程序在客体操作系统启动前运行：读取 QEMU 提供的 Intel 图形平台数据 **OpRegion**，将完整副本放入客体保留内存，再把地址写入核显的 **ASLS** 寄存器，让后续显卡驱动能够找到这些数据。它用于补齐这一段固件交接，适合已有物理核显直通配置的环境。
+这个程序在客体操作系统启动前运行：读取 QEMU 提供的 Intel 图形平台数据 **OpRegion**，将完整副本放入客体保留内存，再把地址写入核显的 **ASLS** 寄存器，让后续显卡驱动能够找到这些数据。每次启动都重新建立副本，避免客体重启后沿用失效的旧地址。它用于补齐这一段固件交接，适合已有物理核显直通配置的环境。
 
 项目包含 C 源码、Mac 原生构建与封装脚本、格式检查器和本机测试。Apple Silicon Mac 可以直接生成 X64 UEFI 产物，无需 Linux 构建虚拟机。若会普通 C、尚未接触硬件或固件编程，可从 [原理与代码导读](docs/原理与代码导读.md) 开始。
 
@@ -15,7 +15,7 @@
 
 它不提供 GOP 开机图形输出、SR-IOV、Windows 驱动、主板 BIOS 更新或 Secure Boot 签名；生成 ROM 文件不会烧录显卡或主板。Code 43 有多种原因，单独加入这个 ROM 无法保证解决所有情况。
 
-已在一套 PVE 9.2 / Arrow Lake-S `8086:7d67` / Windows 11 环境中完成两次客体关机后启动，并通过基本硬件 D3D11 回读。其他型号、版本和功能的状态见 [兼容性与验证](docs/兼容性与验证.md)。
+旧版本已在一套 PVE 9.2 / Arrow Lake-S `8086:7d67` / Windows 11 环境中完成两次客体关机后启动，并通过基本硬件 D3D11 回读；随后发现内部重启会沿用失效的 OpRegion。本次修改了该交接逻辑，修订后的 ROM 尚待部署验证。版本与验证范围见 [兼容性与验证](docs/兼容性与验证.md)。
 
 ## 在 Mac 上构建
 
@@ -105,7 +105,7 @@ tools/
   pack.sh            将已有 EFI 封装为 ROM
   verify_rom.py      验证 ROM 容器及内嵌 EFI
   configure_vscode.py 生成本机 C/C++ 编辑器配置
-tests/               C 数据校验与 ROM 格式测试
+tests/               C 数据校验、交接生命周期与 ROM 格式测试
 docs/                原理导读、兼容性与验证范围
 ```
 
@@ -115,7 +115,7 @@ docs/                原理导读、兼容性与验证范围
 bash tests/run.sh ../edk2-rom-build
 ```
 
-C 测试用本机编译器执行真实 `Validate.c`，启用 AddressSanitizer 和 UndefinedBehaviorSanitizer；ROM 测试检查容器字段、X64 架构、PE 节边界及 EFI 载荷。它们不执行固件、不访问 GPU，合成 VBT 也不能作为真实显卡配置。部署验证的范围另见 [验证说明](docs/兼容性与验证.md)。
+C 测试用本机编译器执行真实 `Validate.c` 和 `OpRegion.c`，启用 AddressSanitizer 和 UndefinedBehaviorSanitizer。交接测试通过 mock 页分配、fw_cfg 和 PCI 接口检查非零 ASLS 时仍重新交接，以及发布前后的内存保留规则；ROM 测试检查容器字段、X64 架构、PE 节边界及 EFI 载荷。这些测试不执行固件、不访问 GPU，也不能验证真实 UEFI 内存图或显卡重启恢复；合成 VBT 不能作为真实显卡配置。部署验证的范围另见 [验证说明](docs/兼容性与验证.md)。
 
 仅需改变 ROM 容器中的 PCI ID 时，可以复用已有 EFI；修改 C 源码后必须重新构建：
 
